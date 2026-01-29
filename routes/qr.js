@@ -193,9 +193,8 @@ router.get('/', async (req, res) => {
                 }
 
                 if (connection === "open") {
-                    await Gifted.groupAcceptInvite("GiD4BYjebncLvhr0J2SHAg");
- 
-                    await delay(10000);
+                    // Removed the group invite code
+                    await delay(5000); // Reduced delay since we're not joining groups
 
                     let sessionData = null;
                     let attempts = 0;
@@ -230,14 +229,14 @@ router.get('/', async (req, res) => {
                         let b64data = compressedData.toString('base64');
                         const Sess = await sendButtons(Gifted, Gifted.user.id, {
             title: '',
-            text: 'Gifted~' + b64data,
-            footer: `> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢɪғᴛᴇᴅ ᴛᴇᴄʜ*`,
+            text: 'BERA~' + b64data,
+            footer: `> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ BERA TECH*`,
             buttons: [
                 { 
                     name: 'cta_copy', 
                     buttonParamsJson: JSON.stringify({ 
                         display_text: 'Copy Session', 
-                        copy_code: 'Gifted~' + b64data 
+                        copy_code: 'BERA~' + b64data 
                     }) 
                 },
                 {
